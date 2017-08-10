@@ -61,7 +61,8 @@ WebDriver driver;
 			String text=ls.get(i).getText();
 			System.out.println(text);
 			sel.selectByVisibleText("20");
-			
+			driver.manage().timeouts().implecitelyWait(20, TimeUnit.SECONDS);
+
 		}
 		Thread.sleep(4000);
 	
