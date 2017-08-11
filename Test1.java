@@ -37,6 +37,7 @@ WebDriver driver;
 			else if(browserName.equalsIgnoreCase("ie")){
 				System.setProperty("webdriver.ie.driver", "E:\\IEDriverServer.exe");
 				driver=new InternetExplorerDriver();
+				
 			}
 			
 		}
@@ -44,6 +45,7 @@ WebDriver driver;
 		
 		catch(Exception e){
 			e.getMessage();
+			
 		}
 		
 	}
@@ -63,6 +65,9 @@ WebDriver driver;
 			sel.selectByVisibleText("20");
 			driver.manage().timeouts().implecitelyWait(20, TimeUnit.SECONDS);
 
+			WebDriverWait wait =new WebDriverWait(20, driver);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//select[@id='day']"));
+					Thread.sleep(2000);
 		}
 		Thread.sleep(4000);
 	
