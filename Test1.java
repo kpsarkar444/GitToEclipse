@@ -77,6 +77,7 @@ WebDriver driver;
 	@Test
 	public void login_Test(){
 		driver.navigate().to(url);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
 	@AfterTest
